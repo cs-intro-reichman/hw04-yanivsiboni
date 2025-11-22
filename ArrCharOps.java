@@ -81,8 +81,8 @@ public class ArrCharOps {
      */
     public static int lastIndexOf(char[] arr, char ch) {
         if (arr.length == 0)
-        return -1;
-        for (int i = arr.length - 1; i < arr.length; i--){
+            return -1;
+        for (int i = arr.length - 1; i < arr.length && i != 0; i--){
             if (arr[i] == ch)
                 return i;
         }
