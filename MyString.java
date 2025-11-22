@@ -37,12 +37,12 @@ public class MyString {
        int N = str1.length();
        if (M == 0) return true;
        if (M > N) return false;
-       String lowerStr1 = lowerCase(str1);
-       String lowerStr2 = lowerCase(str2);
+      
+       
         for (int i = 0; i <= N - M; i++){
             boolean matched = true;
             for (int j = 0; j < M; j++){
-                if (lowerStr1.charAt(i + j) != lowerStr2.charAt(j)){
+                if (str1.charAt(i + j) != str2.charAt(j)){
                     matched = false;
                     break;
                 }
