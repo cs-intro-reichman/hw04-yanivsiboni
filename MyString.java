@@ -31,33 +31,28 @@ public class MyString {
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
-   public static boolean contains(String str1, String str2) {
-        if (str2 == null || str1 == null) {
-            return false;
-        }
-        if (str2.length() == 0) {
-            return true;
-        }
-        if (str2.length() > str1.length()) {
-            return false;
-        }
-
-        int n = str1.length();
-        int m = str2.length();
-
-        for (int i = 0; i <= n - m; i++) {
-            boolean found = true;
-            for (int j = 0; j < m; j++) {
-                if (str1.charAt(i + j) != str2.charAt(j)) {
-                    found = false;
+    public static boolean contains(String str1, String str2) {
+       if (str2 == null || str1 == null) return false;
+        int M = str2.length();
+       int N = str1.length();
+       if (M == 0) return true;
+       if (M > N) return false;
+       String lowerStr1 = lowerCase(str1);
+       String lowerStr2 = lowerCase(str2);
+        for (int i = 0; i <= N - M; i++){
+            boolean matched = true;
+            for (int j = 0; j < M; j++){
+                if (lowerStr1.charAt(i + j) != lowerStr2.charAt(j)){
+                    matched = false;
                     break;
                 }
-            }
-            if (found) {
-                return true;
-            }
+       
         }
-
+        if (matched) return true;
+    } 
         return false;
+
     }
 }
+
+   
