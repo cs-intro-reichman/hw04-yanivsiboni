@@ -179,8 +179,8 @@ public class ArrCharOps {
             char char1 = str1.charAt(i);
             char char2 = str2.charAt(i);
             
-            if (Character.toLowerCase(char1) < Character.toLowerCase(char2)) return -1;
-            if (Character.toLowerCase(char1) > Character.toLowerCase(char2)) return 1;
+            if (char1 < char2) return -1;
+            if (char1 > char2) return 1;
             
         }
 
