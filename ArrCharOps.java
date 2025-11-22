@@ -175,8 +175,8 @@ public class ArrCharOps {
         }
 
         for (int i = 0; i < Math.min(str1.length(), str2.length());i++){
-            char c1 = Character.toLowerCase(str1.charAt(i));
-        char c2 = Character.toLowerCase(str2.charAt(i));
+            char c1 = (str1.charAt(i));
+        char c2 = (str2.charAt(i));
           
             
             if (c1 < c2) return -1;
