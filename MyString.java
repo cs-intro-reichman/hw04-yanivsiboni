@@ -32,8 +32,8 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-       int M = str1.length();
-       int N = str2.length();
+       int M = str2.length();
+       int N = str1.length();
        if (M == 0) return true;
        if (M > N) return false;
        String lowerStr1 = lowerCase(str1);
@@ -41,7 +41,7 @@ public class MyString {
         for (int i = 0; i <= N - M; i++){
             boolean matched = true;
             for (int j = 0; j < M; j++){
-                if (lowerStr2.charAt(i + j) != lowerStr1.charAt(j)){
+                if (lowerStr1.charAt(i + j) != lowerStr2.charAt(j)){
                     matched = false;
                     break;
                 }
