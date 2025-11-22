@@ -80,6 +80,8 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int lastIndexOf(char[] arr, char ch) {
+        if (arr.length == 0)
+        return -1;
         for (int i = arr.length - 1; i < arr.length; i--){
             if (arr[i] == ch)
                 return i;
@@ -164,7 +166,7 @@ public class ArrCharOps {
     public static int compareTo(String str1, String str2) {
         
         for (int i = 0; i < Math.min(str1.length(), str2.length());i++){
-            if (str1.charAt(i) < 'a' || str1.charAt(i) > 'z' || str2.charAt(i) < 'a' | str2.charAt(i) > 'z')
+            if (str1.charAt(i) < 'a' || str1.charAt(i) > 'z' || str2.charAt(i) < 'a' || str2.charAt(i) > 'z')
                 return -2;
     
             if (str1.charAt(i) < str2.charAt(i))
@@ -172,8 +174,13 @@ public class ArrCharOps {
             
             if (str1.charAt(i) > str2.charAt(i))
             return 1;
+            }
+            if (str1.length() > str2.length())
+                return 1;
 
-        }
+            if (str1.length() < str2.length())
+                return -1;
+        
         return 0;
     }
 }
