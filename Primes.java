@@ -20,7 +20,7 @@ public class Primes {
                 System.out.println(i);
             }
         }
-        System.out.println("There are " + primeCounter + " primes between 2 and " + userNumber + "(" + (int)(((double)primeCounter / (double)userNumber) * 100) + "% are primes)");
+        System.out.println("There are " + primeCounter + " primes between 2 and " + userNumber + " (" + (int)(((double)primeCounter / (double)userNumber) * 100) + "% are primes)");
         
     }
 }
