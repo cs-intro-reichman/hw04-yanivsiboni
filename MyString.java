@@ -34,7 +34,8 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
        int M = str1.length();
        int N = str2.length();
-        if (M > N) return false;
+       if (M == 0) return true;
+       if (M > N) return false;
         for (int i = 0; i <= N - M; i++){
             boolean matched = true;
             for (int j = 0; j < M; j++){
