@@ -36,10 +36,12 @@ public class MyString {
        int N = str2.length();
        if (M == 0) return true;
        if (M > N) return false;
+       String lowerStr1 = lowerCase(str1);
+       String lowerStr2 = lowerCase(str2);
         for (int i = 0; i <= N - M; i++){
             boolean matched = true;
             for (int j = 0; j < M; j++){
-                if (str2.charAt(i + j) != str1.charAt(j)){
+                if (lowerStr2.charAt(i + j) != lowerStr1.charAt(j)){
                     matched = false;
                     break;
                 }
