@@ -165,7 +165,15 @@ public class ArrCharOps {
      */
  
         public static int compareTo(String str1, String str2) {
-     
+        for (int i = 0; i < str1.length(); i++) {
+            char c = str1.charAt(i);
+            if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))) return -2;
+        }
+        for (int i = 0; i < str2.length(); i++) {
+            char c = str2.charAt(i);
+            if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))) return -2;
+        }
+
         for (int i = 0; i < Math.min(str1.length(), str2.length());i++){
             char char1 = str1.charAt(i);
             char char2 = str2.charAt(i);
@@ -181,3 +189,4 @@ public class ArrCharOps {
         return 0;
     }
 }
+
